@@ -1,0 +1,31 @@
+# mccl/configs/model/euclid.yaml
+
+name: euclid
+
+backbone:
+  name: dinov2-small
+  num_blocks: 10
+  frozen: true
+
+manifold:
+  type: product
+  components:
+    - {type: euclidean, dim: 192}
+  pooling: mean
+
+predictor:
+  hidden: 384
+  depth: 2
+
+classifier:
+  type: prototype
+
+reg:
+  lambda_h: 0.0
+  lambda_s: 0.0
+  lambda_e: 0.0
+
+jepa:
+  n_context: 64
+  n_target: 32
+  multi_step: 2

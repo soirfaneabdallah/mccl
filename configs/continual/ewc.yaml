@@ -1,0 +1,6 @@
+# mccl/configs/continual/ewc.yaml
+
+name: ewc
+lambda: 1.0e4
+fisher_samples: 512
+fisher_batches: 16

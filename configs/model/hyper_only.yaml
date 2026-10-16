@@ -1,0 +1,31 @@
+# mccl/configs/model/hyper_only.yaml
+
+name: hyper_only
+
+backbone:
+  name: dinov2-small
+  num_blocks: 10
+  frozen: true
+
+manifold:
+  type: product
+  components:
+    - {type: hyperbolic, dim: 192, curvature: 1.0}
+  pooling: tangent_mean
+
+predictor:
+  hidden: 384
+  depth: 2
+
+classifier:
+  type: prototype
+
+reg:
+  lambda_h: 1.0e-3
+  lambda_s: 0.0
+  lambda_e: 0.0
+
+jepa:
+  n_context: 64
+  n_target: 32
+  multi_step: 2

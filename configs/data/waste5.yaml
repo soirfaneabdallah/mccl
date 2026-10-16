@@ -1,0 +1,26 @@
+# mccl/configs/data/waste5.yaml
+
+name: waste5
+root: data/raw
+classes:
+  - cardboard
+  - glass
+  - metal
+  - paper
+  - plastic
+num_classes: 5
+splits_dir: data/splits
+ood_dir: data/ood
+image_size: 224
+batch_size: 32
+num_workers: 4
+seed: 0
+group_key: source_id       # découpage anti-fuite par groupe / prise
+val_frac: 0.15
+test_frac: 0.15
+class_to_idx:
+  cardboard: 0
+  glass: 1
+  metal: 2
+  paper: 3
+  plastic: 4

@@ -1,0 +1,26 @@
+# mccl/configs/continual/dual_memory.yaml
+
+name: dual_memory
+
+fast:
+  capacity: 256
+  strategy: reservoir
+
+slow:
+  capacity_per_class: 32
+  strategy: herding
+
+surprise:
+  metric: jepa_pred_error      # erreur de prédiction JEPA
+  normalize: running_std       # normalisation en ligne
+  alpha: 0.99
+  threshold_quantile: 0.9
+
+consolidation:
+  trigger: surprise
+  epochs: 1
+  lr: 1.0e-3
+
+classifier:
+  head: prototype
+  extendable: true

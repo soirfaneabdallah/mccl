@@ -1,0 +1,18 @@
+# mccl/configs/experiment/incr_waste5_mixed_dual.yaml
+
+defaults:
+  - /data: waste5
+  - /model: mixed
+  - /continual: dual_memory
+
+experiment:
+  name: incr_waste5_mixed_dual
+  orders:
+    - [0, 1, 2, 3, 4]
+    - [0, 4, 1, 3, 2]
+    - [2, 0, 3, 1, 4]
+  seeds: [0, 1, 2]
+  eval_after_each_task: true
+  eval_ood: true
+  eval_geometry: true
+  save_dir: results

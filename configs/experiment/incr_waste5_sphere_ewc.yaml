@@ -1,0 +1,16 @@
+# mccl/configs/experiment/incr_waste5_sphere_ewc.yaml
+
+defaults:
+  - /data: waste5
+  - /model: sphere_only
+  - /continual: ewc
+
+experiment:
+  name: incr_waste5_sphere_ewc
+  orders:
+    - [0, 1, 2, 3, 4]
+  seeds: [0, 1, 2]
+  eval_after_each_task: true
+  eval_ood: true
+  eval_geometry: true
+  save_dir: results

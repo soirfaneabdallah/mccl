@@ -1,0 +1,5 @@
+# mccl/configs/continual/finetune.yaml
+
+name: finetune
+lr: 1.0e-3
+epochs_per_task: 5

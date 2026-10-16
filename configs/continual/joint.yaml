@@ -1,0 +1,6 @@
+# mccl/configs/continual/joint.yaml
+
+name: joint
+lr: 1.0e-3
+epochs_per_task: 5
+note: "borne haute — accès à toutes les données à chaque tâche"

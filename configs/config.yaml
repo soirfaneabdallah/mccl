@@ -1,0 +1,19 @@
+# mccl/configs/config.yaml
+
+defaults:
+  - data: waste5
+  - model: mixed
+  - continual: dual_memory
+  - experiment: incr_waste5_mixed_dual
+  - _self_
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+
+seed: 0
+device: cuda
+log_level: INFO
