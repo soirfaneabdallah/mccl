@@ -1,0 +1,84 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# --- Environnements virtuels ---
+.venv/
+venv/
+env/
+.env
+.conda/
+.uv/
+
+# --- Tests / cache ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- IDE / éditeurs ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Données (volumineuses, non versionnées) ---
+data/raw/
+data/processed/
+data/ood/
+data/splits/*.json
+!data/**/.gitkeep
+
+# --- Résultats / checkpoints ---
+results/*
+!results/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.safetensors
+
+# --- Logs ---
+*.log
+logs/
+wandb/
+mlruns/
+lightning_logs/
+tensorboard/
+
+# --- Hydra ---
+outputs/
+multirun/
+
+# --- Caches torch / DINOv2 ---
+.cache/
+torch_hub/
+
+# --- Divers ---
+*.zip
+*.tar.gz
+*.tmp
+*.bak
