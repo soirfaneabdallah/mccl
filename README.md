@@ -4,8 +4,7 @@ Projet pilote de **classification incrémentale d'images de déchets** avec un e
 
 Ce dépôt sert de banc d'essai à la thèse *« Modèles du monde à courbure mixte pour la planification hiérarchique en robotique »*. Il teste l'encodeur (hypothèse H1) et l'apprentissage continu (WP3). Il ne teste **pas** la planification hiérarchique (H2), faute d'actions et de sous-buts en classification d'images.
 
-> **Statut** : phase de conception. La structure et les interfaces ci-dessous sont celles du code à écrire ; les commandes sont les interfaces visées.
-
+> **Statut** : phase de développement. 
 ---
 
 ## 1. Objectifs scientifiques
