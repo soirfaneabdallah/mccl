@@ -163,4 +163,4 @@ python scripts/analyze_results.py --results results/ --out reports/
 
 ## 11. Auteur
 
-Abdallah Houmadi SOIRFANE — projet de thèse sur les modèles du monde à courbure mixte pour la planification hiérarchique en robotique.
+Abdallah Houmadi SOIRFANE 
