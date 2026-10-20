@@ -19,7 +19,7 @@ from typing import Iterable, List, Tuple
 import numpy as np
 import pandas as pd
 
-from mccl.utils.logging import get_logger
+from utils.logging import get_logger
 
 log = get_logger(__name__)
 
