@@ -12,7 +12,7 @@ from typing import Dict, List, Optional
 import torch
 import torch.nn as nn
 
-from geometry.manifolds import ProductManifold
+from src.geometry.manifolds import ProductManifold
 
 
 class PrototypeClassifier(nn.Module):
