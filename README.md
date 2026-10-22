@@ -143,10 +143,10 @@ python scripts/analyze_results.py --results results/ --out reports/
 
 ## 9. Feuille de route
 
-- [ ] Données, splits anti-fuite, sonde linéaire de référence sur DINOv2 gelé
-- [ ] Module `geometry/` et tests ; étape 0 (diagnostics sans entraînement)
-- [ ] JEPA masqué et classifieur sur les 2 premières classes
-- [ ] Boucle incrémentale : fine-tuning, joint, rejeu
+- [x ] Données, splits anti-fuite, sonde linéaire de référence sur DINOv2 gelé
+- [x ] Module `geometry/` et tests ; étape 0 (diagnostics sans entraînement)
+- [x ] JEPA masqué et classifieur sur les 2 premières classes
+- [x ] Boucle incrémentale : fine-tuning, joint, rejeu
 - [ ] Mémoire duale, signal de surprise, EWC
 - [ ] OOD, calibration, ablations (euclidien, H seul, S seul, mixte)
 
