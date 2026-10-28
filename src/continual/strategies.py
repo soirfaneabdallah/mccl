@@ -166,10 +166,19 @@ class EWCMethod(Strategy):
             log.warning("EWCMethod.end_task : pas de train_loader, Fisher non estimée")
             return
 
+        # --- CORRECTION ICI ---
         def loss_fn(logits, y):
             # logits peut être un JepaOutput ou un tenseur
             logits = logits.logits if hasattr(logits, "logits") else logits
+            
+            # SÉCURITÉ : Si le modèle n'a pas assez de sorties pour le label y,
+            # on ignore ce batch (évite l'erreur IndexError).
+            if logits.shape[-1] <= y.max():
+                log.warning(f"EWC : Label {y.max().item()} hors limites (sortie: {logits.shape[-1]}). Batch ignoré.")
+                return torch.tensor(0.0, requires_grad=True, device=logits.device)
+                
             return torch.nn.functional.cross_entropy(logits, y)
+        # ----------------------
 
         self.ewc.estimate(loss_fn, train_loader, device=str(next(self._model.parameters()).device))
         log.info("EWC : Fisher mise à jour sur la tâche %d", task.index)
